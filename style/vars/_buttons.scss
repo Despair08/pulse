@@ -1,0 +1,8 @@
+.button {
+  padding: 6px 8px;
+  border-radius: 5px;
+  @extend %font;
+  text-transform: uppercase;
+  color: $text-color--light;
+  background-color: $accent-color;
+}

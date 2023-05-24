@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  @extend %font;
+  @include font(42px, 700, 63%, right);
+
+  text-transform: uppercase;
+}
+
+h2 {
+  @extend %font;
+  @include font(36px, 700, 54px, left);
+
+  text-transform: uppercase;
+}
+
+h3 {
+  @extend %font;
+  @include font(30px, 700, 94%, center);
+
+  text-transform: uppercase;
+}
+
+h4 {
+  @extend %font;
+  @include font(18px, 700, 94%, left);
+}
+
+h5 {
+  @extend %font;
+  @include font(16px, 700, 25px, center);
+}
+
+.background__container {
+  background-image: url("../assets/images/content/main_bg.jpg");
+  background-repeat: no-repeat;
+}
+
+.main {
+  flex: 1 0 auto;
+}

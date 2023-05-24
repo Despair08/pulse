@@ -1,0 +1,45 @@
+.callback__wrapper {
+  max-width: 950px;
+  padding: 0 15px;
+}
+
+.callback {
+  background-image: url("../assets/images/content/consultation_bg.jpg");
+  background-repeat: no-repeat;
+}
+
+.callback__title {
+  padding: 100px 0 8px;
+  color: $text-color--light;
+}
+
+.callback__descr {
+  padding-bottom: 36px;
+
+  @extend %font;
+  @include font(20px, 500, 30px, left);
+
+  color: $text-color--light;
+}
+
+.callback__form {
+  display: flex;
+  flex-direction: column;
+  width: 303px;
+  gap: 11px;
+  padding-bottom: 109px;
+}
+
+.form__input {
+  height: 54px;
+  padding: 0 5px;
+  border-radius: 5px;
+
+  @extend %font;
+  @include font(14px, 400, 14px, left);
+}
+
+.form__button {
+  @extend %font;
+  @include font(16px, 500, 25px, center);
+}
