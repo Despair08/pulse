@@ -1,0 +1,26 @@
+.tag {
+  width: 202px;
+  height: 52px;
+  padding: 17px 0;
+  text-transform: uppercase;
+  @extend %font;
+  @include font(18px, 400, 18px, center);
+  transform: skew(-25deg);
+  color: $tag-text-color;
+  border: 2px solid $tag-border-color;
+  user-select: none;
+  cursor: pointer;
+  @extend %transition;
+  & > span {
+    display: inline-block;
+    transform: skew(25deg);
+  }
+}
+
+.tag:hover,
+.tag--active {
+  background-color: $accent-color;
+  border-color: $accent-color;
+  color: $text-color--light;
+  @extend %transition;
+}

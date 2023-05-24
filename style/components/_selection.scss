@@ -1,0 +1,72 @@
+.selection__wrapper {
+  max-width: 950px;
+  padding: 0 15px;
+}
+
+.selection {
+  &__title {
+    padding: 70px 0 17px;
+    color: $text-color--light;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    @extend %font;
+
+    @include font(24px, 500, 63%, right);
+    text-transform: uppercase;
+    color: $text-color--light;
+  }
+}
+
+.info {
+  &__container {
+    display: flex;
+    align-items: center;
+    align-self: end;
+    padding: 60px 0 65px;
+    gap: 30px;
+  }
+
+  &__descr {
+    @extend %font;
+
+    @include font(14px, 500, 100%, center);
+    letter-spacing: 1px;
+    min-width: 135px;
+    color: $text-color--light;
+  }
+}
+
+.info__img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  & > img {
+    width: 42px;
+    height: 45px;
+  }
+}
+.consultation {
+  &__descr {
+    padding: 8px 0 93px;
+
+    @extend %font;
+    @include font(16px, 500, 18px, right);
+    color: $text-color--light;
+
+    & > a {
+      @include font(16px, 500, 25px, right);
+      text-transform: uppercase;
+      text-decoration: underline;
+      color: $text-color--light;
+    }
+  }
+}
+
+.main__button {
+  @extend %font;
+  @include font(16px, 500, 25px, center);
+  align-self: end;
+}

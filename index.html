@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/main.css">
+  <script src="https://api-maps.yandex.ru/3.0/?apikey=c7c111c0-7d4e-4757-9816-ae24fea5acfc&lang=ru_RU"></script>
+  <title>RunSmart</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="background__container">
+      <header class="header">
+        <div class="wrapper header__wrapper">
+          <a href="#" class="header__logo">
+            <img src="../assets/images/content/header_logo.png" alt="logo" class="logo__img">
+          </a>
+          <div class="header__descr">
+            <p class="descr__subtitle">Официальный представитель</p>
+            <h4 class="descr__title">Garmin, Polar, Suunto</h4>
+          </div>
+          <div class="header__contacts">
+            <p class="contacts__number">+7 (499) 922-89-74</p>
+            <a href="tel:+7(499)922-89-74" class="button contacts__button">заказать звонок</a>
+          </div>
+        </div>
+      </header>
+      <div class="selection">
+        <div class="wrapper selection__wrapper">
+          <h1 class="selection__title">Подбор пульсометра</h1>
+          <p class="selection__subtitle">с учётом Вашего уровня подготовки</p>
+          <div class="info__container">
+            <figure class="info__img">
+              <img src="../assets/images/icons/main/main_time.png" alt="timer">
+              <figcaption class="info__descr">Время подбора:<br>10 минут</figcaption>
+            </figure>
+            <figure class="info__img">
+              <img src="../assets/images/icons/main/main_delivery.png" alt="timer">
+              <figcaption class="info__descr">Бесплатная<br>доставка</figcaption>
+            </figure>
+            <figure class="info__img">
+              <img src="../assets/images/icons/main/main_questions.png" alt="timer">
+              <figcaption class="info__descr">Ответим<br>на все вопросы</figcaption>
+            </figure>
+          </div>
+          <a href="#" class="button main__button">заказать консультацию</a>
+          <span class="consultation__descr">или <a href="#catalog" class="consultation__link">перейти в
+              каталог</a></span>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <section class="advantages">
+        <div class="wrapper advantages__wrapper">
+          <h3 class="advantages__title">НАШИ ПРЕИМУЩЕСТВА</h3>
+          <div class="advantages__container">
+            <div class="advantage">
+              <img class="advantage__img" src="../assets/images/icons/cup_advantages.png" alt="cup">
+              <h4 class="advantage__title">Делимся опытом</h4>
+              <p class="advantage__descr">Наши сотрудники всегда готовы поделиться своим опытом,<br>так как сами бегают
+                полумарафоны,<br>переплыли Босфор,готовятся к<br>соревнованиям по триатлону!</p>
+            </div>
+            <div class="advantage">
+              <img class="advantage__img" src="../assets/images/icons/heart_advantages.png" alt="pulse"
+                class="card__img">
+              <h4 class="advantage__title">Заботимся о здоровье</h4>
+              <p class="advantage__descr">Мы работаем для того,<br>чтобы Ваши занятия спортом шли на<br>пользу Вашему
+                здоровью и
+                были в<br>радость Вам и Вашим близким!</p>
+            </div>
+            <div class="advantage">
+              <img class="advantage__img" src="../assets/images/icons/shoe_advantages.png" alt="shoe">
+              <h4 class="advantage__title">Учим бегать</h4>
+              <p class="advantage__descr">Помогаем с обучением<br>правильной технике бега!<br>Дружим с крупнейшей школой
+                бега
+                в<br>
+                России - <a href="https://ilovesupersport.ru/running" class="descr__link">I LOVE RUNNING</a>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="callback">
+        <div class="wrapper callback__wrapper">
+          <h2 class="callback__title">Получите бесплатную консультацию<br>по подбору пульсометра</h2>
+          <p class="callback__descr">Просто заполните форму заявки<br>и мы перезвоним вам в течении 10 минут</p>
+          <form class="callback__form" action="">
+            <input type="text" class="form__input" placeholder="Ваше имя" required>
+            <input type="text" class="form__input" placeholder="Ваш телефон" required>
+            <input type="text" class="form__input" placeholder="Ваш E-mail">
+            <button class="button form__button" type="submit">заказать кОНСУЛЬТАЦИЮ</button>
+          </form>
+        </div>
+      </section>
+      <section class="catalog">
+        <div class="wrapper catalog__wrapper">
+          <div class="catalog__carousel">
+            <div class="left__arrow"></div>
+            <div class="carousel__wrapper">
+              <div class="carousel">
+                <img src="../assets/images/content/carousel/slide_1.png" alt="" class="caruosel__img" id="left__slide">
+                <img src="../assets/images/content/carousel/slide_2.png" alt="" class="caruosel__img"
+                  id="active__slide">
+                <img src="../assets/images/content/carousel/slide_3.png" alt="" class="caruosel__img" id="right__slide">
+              </div>
+            </div>
+            <div class="right__arrow"></div>
+          </div>
+          <h3 id="catalog" class="catalog__title">Каталог пульсометров</h3>
+          <div class="catalog__tags">
+            <div class="tag catalog__tag tag--active"><span>Для фитнеса</span></div>
+            <div class="tag catalog__tag"><span>для бега</span></div>
+            <div class="tag catalog__tag"><span>для триатлона</span></div>
+          </div>
+          <div class="catalog__cards">
+            <div class="catalog__card">
+              <div class="img__container">
+                <img src="../assets/images/cards/card_photo.png" alt="pulsemeter" class="card__img">
+              </div>
+              <h5 class="card__title">Пульсометр Polar FT1</h5>
+              <p class="card__descr">Для первых шагов в тренировках, основанных на сердечном ритме</p>
+              <a href="#" class="card__link">ПОДРОБНЕЕ</a>
+              <!-- <div class="card__back">
+                <ul class="card__list">
+                  <li class="card__item">Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                  <li class="card__item">Вы увидите информативный графический индикатор целевых тренировочных зон
+                    пульса;</li>
+                  <li class="card__item">Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                  <li class="card__item">Вы сможете посмотреть данные по 10 тренировкам.</li>
+                </ul>
+                <a href="#" class="card__link">назад</a>
+              </div> -->
+              <div class="card-bottom__wrapper">
+                <div class="price__wrapper">
+                  <p class="standart__price">4 750 руб.</p>
+                  <p class="sale__price">4 500 руб.</p>
+                </div>
+                <a href="#" class="button card__button">купить</a>
+              </div>
+            </div>
+            <div class="catalog__card">
+              <div class="img__container">
+                <img src="../assets/images/cards/card_photo.png" alt="pulsemeter" class="card__img">
+              </div>
+              <h5 class="card__title">Пульсометр Suunto M2</h5>
+              <p class="card__descr">Для первых шагов в тренировках, основанных на сердечном ритме</p>
+              <a href="#" class="card__link">ПОДРОБНЕЕ</a>
+              <!-- <div class="card__back">
+                <ul class="card__list">
+                  <li class="card__item">Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                  <li class="card__item">Вы увидите информативный графический индикатор целевых тренировочных зон
+                    пульса;</li>
+                  <li class="card__item">Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                  <li class="card__item">Вы сможете посмотреть данные по 10 тренировкам.</li>
+                </ul>
+                <a href="#" class="card__link">назад</a>
+              </div> -->
+              <div class="card-bottom__wrapper">
+                <div class="price__wrapper">
+                  <p class="standart__price">6 690 руб.</p>
+                  <p class="sale__price">6 641 руб.</p>
+                </div>
+                <a href="#" class="button card__button">купить</a>
+              </div>
+            </div>
+            <div class="catalog__card">
+              <div class="img__container">
+                <img src="../assets/images/cards/card_photo.png" alt="pulsemeter" class="card__img">
+              </div>
+              <h5 class="card__title">Пульсометр Polar FT4</h5>
+              <p class="card__descr">Для первых шагов в тренировках, основанных на сердечном ритме</p>
+              <a href="#" class="card__link">ПОДРОБНЕЕ</a>
+              <!-- <div class="card__back">
+                <ul class="card__list">
+                  <li class="card__item">Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                  <li class="card__item">Вы увидите информативный графический индикатор целевых тренировочных зон
+                    пульса;</li>
+                  <li class="card__item">Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                  <li class="card__item">Вы сможете посмотреть данные по 10 тренировкам.</li>
+                </ul>
+                <a href="#" class="card__link">назад</a>
+              </div> -->
+              <div class="card-bottom__wrapper">
+                <div class="price__wrapper">
+                  <p class="standart__price">6 690 руб.</p>
+                  <p class="sale__price">6 641 руб.</p>
+                </div>
+                <a href="#" class="button card__button">купить</a>
+              </div>
+            </div>
+            <div class="catalog__card">
+              <div class="img__container">
+                <img src="../assets/images/cards/card_photo.png" alt="pulsemeter" class="card__img">
+              </div>
+              <h5 class="card__title">Пульсометр Polar FT1</h5>
+              <p class="card__descr">Для первых шагов в тренировках, основанных на сердечном ритме</p>
+              <a href="#" class="card__link">ПОДРОБНЕЕ</a>
+              <!-- <div class="card__back">
+                <ul class="card__list">
+                  <li class="card__item">Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                  <li class="card__item">Вы увидите информативный графический индикатор целевых тренировочных зон
+                    пульса;</li>
+                  <li class="card__item">Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                  <li class="card__item">Вы сможете посмотреть данные по 10 тренировкам.</li>
+                </ul>
+                <a href="#" class="card__link">назад</a>
+              </div> -->
+              <div class="card-bottom__wrapper">
+                <div class="price__wrapper">
+                  <p class="standart__price">4 750 руб.</p>
+                  <p class="sale__price">4 500 руб.</p>
+                </div>
+                <a href="#" class="button card__button">купить</a>
+              </div>
+            </div>
+            <div class="catalog__card">
+              <div class="img__container">
+                <img src="../assets/images/cards/card_photo.png" alt="pulsemeter" class="card__img">
+              </div>
+              <h5 class="card__title">Пульсометр Suunto M2</h5>
+              <p class="card__descr">Для первых шагов в тренировках, основанных на сердечном ритме</p>
+              <a href="#" class="card__link">ПОДРОБНЕЕ</a>
+              <!-- <div class="card__back">
+                <ul class="card__list">
+                  <li class="card__item">Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                  <li class="card__item">Вы увидите информативный графический индикатор целевых тренировочных зон
+                    пульса;</li>
+                  <li class="card__item">Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                  <li class="card__item">Вы сможете посмотреть данные по 10 тренировкам.</li>
+                </ul>
+                <a href="#" class="card__link">назад</a>
+              </div> -->
+              <div class="card-bottom__wrapper">
+                <div class="price__wrapper">
+                  <p class="standart__price">6 690 руб.</p>
+                  <p class="sale__price">6 641 руб.</p>
+                </div>
+                <a href="#" class="button card__button">купить</a>
+              </div>
+            </div>
+            <div class="catalog__card">
+              <div class="img__container">
+                <img src="../assets/images/cards/card_photo.png" alt="pulsemeter" class="card__img">
+              </div>
+              <h5 class="card__title">Пульсометр Polar FT4</h5>
+              <p class="card__descr">Для первых шагов в тренировках, основанных на сердечном ритме</p>
+              <a href="#" class="card__link">ПОДРОБНЕЕ</a>
+              <!-- <div class="card__back">
+                <ul class="card__list">
+                  <li class="card__item">Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                  <li class="card__item">Вы увидите информативный графический индикатор целевых тренировочных зон
+                    пульса;</li>
+                  <li class="card__item">Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                  <li class="card__item">Вы сможете посмотреть данные по 10 тренировкам.</li>
+                </ul>
+                <a href="#" class="card__link">назад</a>
+              </div> -->
+              <div class="card-bottom__wrapper">
+                <div class="price__wrapper">
+                  <p class="standart__price">6 690 руб.</p>
+                  <p class="sale__price">6 641 руб.</p>
+                </div>
+                <a href="#" class="button card__button">купить</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="wrapper reviews__wrapper">
+          <h3 class="reviews__title">отзывы клиентов</h3>
+          <div class="reviewer">
+            <div class="reviewer__container">
+              <div class="reviewer__img-container">
+                <img src="../assets/images/reviewes/photo_1.png" alt="reviewer photo" class="review-img">
+              </div>
+              <div class="review__body">
+                <h4 class="reviewer__name">Ирина Иванченко</h4>
+                <p class="reviewer__counter">2 полумарафона</p>
+                <div class="reviewer__text">
+                  <p>
+                    Не знала, что себе купить - обратилась к ребятам из RunSmart - подобрали
+                    пульсометр, который подошёл именно под мои цели
+                    и финансовые возможности.Через некоторое время решила обновить гаджет - не раздумывая обратилась
+                    туда
+                    же.
+                  </p>
+                  <p>Новые цели - новый гаджет!</p>
+                  <p>Спасибо, RunSmart!</p>
+                </div>
+              </div>
+            </div>
+            <div class="reviewer__container">
+              <div class="reviewer__img-container">
+                <img src="../assets/images/reviewes/photo_2.png" alt="reviewer photo" class="review-img">
+              </div>
+              <div class="review__body">
+                <h4 class="reviewer__name">Иван Сёмочкин</h4>
+                <p class="reviewer__counter">1 полумарафон</p>
+                <div class="reviewer__text">
+                  <p>
+                    Крутая штука-пульсометр. Обычно без них бегал. Оказывается только хуже себе делал. <br>
+                    Купил пульсометр, ещё в подарок получил тренировку. Со мной вместе провели первую тренировку,
+                    научили
+                    пользоваться новым гаджетом.
+                    Также объяснили
+                    основы анатомии, составили план тренировок на месяц вперёд.
+                  </p>
+                  <p>
+                    С ними подготовился к своему первому
+                    полумарафону! Спасибо!!!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="reviewer__container">
+              <div class="reviewer__img-container">
+                <img src="../assets/images/reviewes/photo_3.png" alt="reviewer photo" class="review-img">
+              </div>
+              <div class="review__body">
+                <h4 class="reviewer__name">Юлия Дашкина</h4>
+                <p class="reviewer__counter">2 полумарафона</p>
+                <div class="reviewer__text">
+                  <p>
+                    Долго не могла начать бегать, т.к. до этого несколько раз начинала, но становилось тяжело и я
+                    бросала.
+                    От друзей
+                    услышала о RunSmart и о беге с контролем пульса и решила попробовать.
+                  </p>
+                  <p>Позвонила, ребята поинтересовались моими целями и подобрали очень интересный вариант со скидкой!
+                    Теперь бегаю и
+                    наслаждаюсь бегом! Пробежала уже 2 полумарафона и несколько более коротких забегов и не намерена
+                    останавливаться!</p>
+                  <p>Спасибо!!!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__map">
+        <div class="map"><iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.430307889286!2d37.64442107718684!3d55.768397990789445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCAxMDcwNzg!5e0!3m2!1sru!2sru!4v1684382292286!5m2!1sru!2sru"
+            width="100%" height="630px" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="wrapper footer__wrapper">
+          <div class="footer__contacts">
+            <p class="footer__addres">Москва, Мясницкий проезд, д.3с1</p>
+            <a class="footer__tel" href="tel:8-499-922-89-74">8 (499) 922-89-74</a>
+            <nav class="footer__nav">
+              <ul class="footert__list">
+                <li class="footer__item">
+                  <a href="#" class="footer__link">
+                    <img class="footer__img" src="../assets/images/icons/social/facebook.svg" alt="facebook">
+                  </a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">
+                    <img class="footer__img" src="../assets/images/icons/social/instagram.svg" alt="instagram">
+                  </a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">
+                    <img class="footer__img" src="../assets/images/icons/social/pinterest.svg" alt="pinterest">
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="./script/main.js"></script>
+</body>
+
+</html>

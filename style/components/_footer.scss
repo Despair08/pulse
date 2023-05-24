@@ -1,0 +1,53 @@
+.footer__wrapper {
+  max-width: 950px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.footer__map {
+  overflow: hidden;
+  position: relative;
+  height: 630px;
+}
+
+.map {
+  margin: 0 auto;
+  max-height: 630px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.footer__contacts {
+  position: absolute;
+  top: 0;
+  left: 39%;
+  width: 460px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  background-color: $accent-color;
+  margin-bottom: 360px;
+}
+
+.footert__list {
+  display: flex;
+  gap: 27px;
+  justify-content: center;
+}
+
+.footer__addres {
+  padding-top: 50px;
+
+  @extend %font;
+
+  @include font(20px, 500, 20px, center);
+  color: $text-color--light;
+}
+
+.footer__tel {
+  @extend %font;
+
+  @include font(20px, 700, 20px, center);
+  color: $text-color--light;
+}

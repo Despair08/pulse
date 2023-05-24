@@ -1,0 +1,37 @@
+.reviews__wrapper {
+  max-width: 950px;
+  padding: 0 15px;
+}
+
+.reviews__title {
+  padding: 80px 0 64px;
+}
+
+.reviewer {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding-bottom: 80px;
+}
+
+.reviewer__container {
+  display: flex;
+  gap: 60px;
+}
+
+.reviewer__counter {
+  @extend %font;
+
+  @include font(14px, 500, 22px, left);
+  color: $text-counter-color;
+  padding-bottom: 10px;
+}
+
+.reviewer__text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @extend %font;
+  @include font(16px, 300, 16px, left);
+}

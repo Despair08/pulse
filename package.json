@@ -1,0 +1,21 @@
+{
+  "name": "pulse",
+  "version": "1.0.0",
+  "description": "Кнопка **Заказать консультацию** открывает попап с вводом номера телефона (валидируется) и имитирует отправку на имэйл **Поля** формы валидируются, имя строка без спецсимволов кириллица или латиница, телефон цифры, - и (); имэйл @, .; **Слайдер** должен быть бесконечным. **Фильтрация** по тегам, интерактивная карточка.",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch style/main.scss style/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "sass": "^1.62.1"
+  },
+  "dependencies": {
+    "stylelint-selector-bem-pattern": "^2.1.1"
+  }
+}
