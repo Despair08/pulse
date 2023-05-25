@@ -1,6 +1,6 @@
-import { moveLeft } from './_moveLeft.js'
-import { moveRight } from './_moveRight.js'
-import { animationHandler } from './_animationHandler.js'
+import { moveLeft } from './moveLeft.js'
+import { moveRight } from './moveRight.js'
+import { animationHandler } from './animationHandler.js'
 
 const carousel = document.querySelector('.carousel');
 const btnLeft = document.querySelector('.left__arrow');

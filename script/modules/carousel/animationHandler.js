@@ -1,6 +1,6 @@
-import { carousel, btnLeft, btnRight, itemLeft, itemRight, itemActive } from './_carousel.js';
-import { moveLeft } from './_moveLeft.js'
-import { moveRight } from './_moveRight.js'
+import { carousel, btnLeft, btnRight, itemLeft, itemRight, itemActive } from './carousel.js';
+import { moveLeft } from './moveLeft.js'
+import { moveRight } from './moveRight.js'
 
 export const animationHandler = (animationEvent) => {
   let changedItem;

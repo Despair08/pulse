@@ -1,5 +1,5 @@
-import { carousel, btnLeft, btnRight } from './_carousel.js';
-import { moveRight } from './_moveRight.js';
+import { carousel, btnLeft, btnRight } from './carousel.js';
+import { moveRight } from './moveRight.js';
 
 
 
