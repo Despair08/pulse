@@ -130,3 +130,7 @@
   @include font(20px, 700, 20px, left);
   color: $text-color-sale;
 }
+
+.hidden {
+  display: none;
+}

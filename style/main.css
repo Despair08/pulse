@@ -95,10 +95,6 @@ a {
   text-decoration: none;
 }
 
-.hidden {
-  display: none;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -503,6 +499,10 @@ h5 {
   line-height: 20px;
   text-align: left;
   color: #050505;
+}
+
+.hidden {
+  display: none;
 }
 
 .reviews__wrapper {
