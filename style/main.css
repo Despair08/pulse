@@ -1,5 +1,5 @@
 .descr__link:hover, .descr__link, .tag:hover,
-.tag--active, .tag {
+.tag--active, .tag, .button:hover, .button {
   transition: all 0.3s;
 }
 
@@ -13,6 +13,9 @@
   text-transform: uppercase;
   color: #fff;
   background-color: #c70101;
+}
+.button:hover {
+  background-color: #e30000;
 }
 
 .tag {
