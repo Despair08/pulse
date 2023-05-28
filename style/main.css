@@ -3,7 +3,7 @@
   transition: all 0.3s;
 }
 
-.footer__tel, .footer__addres, .reviewer__text, .reviewer__counter, .sale__price, .standart__price, .card__link, .card__descr, .form__button, .form__input, .callback__descr, .advantage__descr, .main__button, .consultation__descr, .info__descr, .selection__subtitle, .contacts__number, .descr__title, .descr__subtitle, h5, h4, h3, h2, h1, .tag, .button {
+.footer__tel, .footer__addres, .reviewer__text, .reviewer__counter, .sale__price, .standart__price, .card__link, .card__descr, .card__item, .form__button, .form__input, .callback__descr, .advantage__descr, .main__button, .consultation__descr, .info__descr, .selection__subtitle, .contacts__number, .descr__title, .descr__subtitle, h5, h4, h3, h2, h1, .tag, .button {
   font-family: "MuseoModerno", Verdana, sans-serif;
 }
 
@@ -437,11 +437,45 @@ h5 {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  gap: 15px;
   width: 300px;
   height: 440px;
   background-color: #fff;
   cursor: pointer;
+}
+
+.card__front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.card__back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.card__item {
+  list-style: square;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  text-align: left;
+  color: #555555;
+}
+
+.card__link {
+  padding-bottom: 11px;
 }
 
 .img__container {
