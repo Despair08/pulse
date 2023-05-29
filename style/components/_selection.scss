@@ -61,6 +61,9 @@
       text-transform: uppercase;
       text-decoration: underline;
       color: $text-color--light;
+      &:hover {
+        color: $bg-color;
+      }
     }
   }
 }

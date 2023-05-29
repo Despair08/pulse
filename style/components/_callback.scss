@@ -37,6 +37,12 @@
 
   @extend %font;
   @include font(14px, 400, 14px, left);
+
+  outline: none;
+  &:focus-visible {
+    border-color: $accent-color;
+    box-shadow: none;
+  }
 }
 
 .form__button {

@@ -257,6 +257,9 @@ h5 {
   text-decoration: underline;
   color: #fff;
 }
+.consultation__descr > a:hover {
+  color: #e5e5e5;
+}
 
 .main__button {
   font-size: 16px;
@@ -357,6 +360,11 @@ h5 {
   font-weight: 400;
   line-height: 14px;
   text-align: left;
+  outline: none;
+}
+.form__input:focus-visible {
+  border-color: #c70101;
+  box-shadow: none;
 }
 
 .form__button {
@@ -534,6 +542,9 @@ h5 {
   font-weight: 500;
   line-height: 14px;
   text-align: center;
+}
+.card__link:hover {
+  color: #e30000;
 }
 
 .card-bottom__wrapper {
