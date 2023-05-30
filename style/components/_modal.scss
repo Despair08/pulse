@@ -9,3 +9,50 @@
   justify-content: center;
   background-color: $overlay-color;
 }
+
+.modal {
+  position: relative;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal__close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $accent-color;
+  background-color: #fff;
+  border-radius: 50%;
+  user-select: none;
+  cursor: pointer;
+}
+
+.modal__close:before,
+.modal__close:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: $accent-color;
+}
+
+div:before {
+  transform: rotate(45deg);
+}
+
+div:after {
+  transform: rotate(-45deg);
+}
+
+.form__wrapper--modal {
+  padding-top: 20px;
+}

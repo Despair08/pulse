@@ -22,11 +22,14 @@
   color: $text-color--light;
 }
 
-.callback__form {
+.form {
   display: flex;
   flex-direction: column;
   width: 303px;
   gap: 11px;
+}
+
+.callback__form {
   padding-bottom: 109px;
 }
 

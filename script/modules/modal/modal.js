@@ -20,11 +20,17 @@ export class Modal{
     // closeBtn
     this.modalCloseBtn = this.createDomNode(this.modalCloseBtn, 'div', 'modal__close', this.classes);
 
+    // this.modalCloseCross = this.createDomNode(this.modalCloseCross, 'span', 'modal__cross', this.classes);
+
+
     this.setContent(content);
 
     this.appendModalElements();
 
-    console.log(this.modal)
+    this.bindEvents();
+
+    this.openModal()
+
   }
 
   createDomNode(node, element, ...classes){
@@ -46,5 +52,22 @@ export class Modal{
     this.modal.append(this.modalCloseBtn);
     this.modal.append(this.modalContent);
     this.overlay.append(this.modal);
+  }
+
+  bindEvents(){
+    this.modalCloseBtn.addEventListener('click', this.closeModal);
+    this.overlay.addEventListener('click', this.closeModal);
+  }
+
+  openModal(){
+      document.body.append(this.overlay);
+    }
+
+  closeModal(e){
+    let classes = e.target.classList;
+    if(classes.contains('overlay') || classes.contains('modal__close')){
+      console.log(e.target)
+      document.querySelector('.overlay').remove();
+    }
   }
 }

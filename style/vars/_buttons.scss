@@ -11,3 +11,11 @@
     background-color: $accent-color--hover;
   }
 }
+
+.button--disabled,
+.button--disabled:hover {
+  cursor: default;
+  border: 2px solid $accent-color;
+  background-color: #fff;
+  color: #000;
+}
