@@ -64,7 +64,7 @@
 .catalog__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 10px;
 }
 
 .catalog__card {
@@ -72,11 +72,65 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  gap: 15px;
   width: 300px;
   height: 440px;
   background-color: #fff;
-  cursor: pointer;
+  perspective: 1000px;
+}
+
+.card__inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card__inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.card__face--front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.card__face--back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: #fff;
+  transform: rotateY(180deg);
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.card__item {
+  list-style: square;
+  @extend %font;
+  @include font(14px, 300, 21px, left);
+  color: $text-color--medium;
+}
+
+.card__link {
+  padding-bottom: 11px;
 }
 
 .img__container {
@@ -109,6 +163,9 @@
   color: $accent-color;
   @extend %font;
   @include font(14px, 500, 14px, center);
+  &:hover {
+    color: $accent-color--hover;
+  }
 }
 
 .card-bottom__wrapper {
@@ -129,4 +186,8 @@
   @extend %font;
   @include font(20px, 700, 20px, left);
   color: $text-color-sale;
+}
+
+.hidden {
+  display: none;
 }

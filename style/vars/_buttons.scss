@@ -5,4 +5,17 @@
   text-transform: uppercase;
   color: $text-color--light;
   background-color: $accent-color;
+  @extend %transition;
+  &:hover {
+    @extend %transition;
+    background-color: $accent-color--hover;
+  }
+}
+
+.button--disabled,
+.button--disabled:hover {
+  cursor: default;
+  border: 2px solid $accent-color;
+  background-color: #fff;
+  color: #000;
 }

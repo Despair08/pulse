@@ -1,9 +1,9 @@
 .descr__link:hover, .descr__link, .tag:hover,
-.tag--active, .tag {
+.tag--active, .tag, .button:hover, .button {
   transition: all 0.3s;
 }
 
-.footer__tel, .footer__addres, .reviewer__text, .reviewer__counter, .sale__price, .standart__price, .card__link, .card__descr, .form__button, .form__input, .callback__descr, .advantage__descr, .main__button, .consultation__descr, .info__descr, .selection__subtitle, .contacts__number, .descr__title, .descr__subtitle, h5, h4, h3, h2, h1, .tag, .button {
+.footer__tel, .footer__addres, .reviewer__text, .reviewer__counter, .sale__price, .standart__price, .card__link, .card__descr, .card__item, .form__button, .form__input, .callback__descr, .advantage__descr, .main__button, .consultation__descr, .info__descr, .selection__subtitle, .contacts__number, .descr__title, .descr__subtitle, h5, h4, h3, h2, h1, .tag, .button {
   font-family: "MuseoModerno", Verdana, sans-serif;
 }
 
@@ -13,6 +13,17 @@
   text-transform: uppercase;
   color: #fff;
   background-color: #c70101;
+}
+.button:hover {
+  background-color: #e30000;
+}
+
+.button--disabled,
+.button--disabled:hover {
+  cursor: default;
+  border: 2px solid #c70101;
+  background-color: #fff;
+  color: #000;
 }
 
 .tag {
@@ -254,6 +265,9 @@ h5 {
   text-decoration: underline;
   color: #fff;
 }
+.consultation__descr > a:hover {
+  color: #e5e5e5;
+}
 
 .main__button {
   font-size: 16px;
@@ -338,11 +352,14 @@ h5 {
   color: #fff;
 }
 
-.callback__form {
+.form {
   display: flex;
   flex-direction: column;
   width: 303px;
   gap: 11px;
+}
+
+.callback__form {
   padding-bottom: 109px;
 }
 
@@ -354,6 +371,11 @@ h5 {
   font-weight: 400;
   line-height: 14px;
   text-align: left;
+  outline: none;
+}
+.form__input:focus-visible {
+  border-color: #c70101;
+  box-shadow: none;
 }
 
 .form__button {
@@ -429,7 +451,7 @@ h5 {
 .catalog__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 10px;
 }
 
 .catalog__card {
@@ -437,11 +459,67 @@ h5 {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  gap: 15px;
   width: 300px;
   height: 440px;
   background-color: #fff;
-  cursor: pointer;
+  perspective: 1000px;
+}
+
+.card__inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card__inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.card__face--front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.card__face--back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: #fff;
+  transform: rotateY(180deg);
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.card__item {
+  list-style: square;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  text-align: left;
+  color: #555555;
+}
+
+.card__link {
+  padding-bottom: 11px;
 }
 
 .img__container {
@@ -476,6 +554,9 @@ h5 {
   line-height: 14px;
   text-align: center;
 }
+.card__link:hover {
+  color: #e30000;
+}
 
 .card-bottom__wrapper {
   display: flex;
@@ -499,6 +580,10 @@ h5 {
   line-height: 20px;
   text-align: left;
   color: #050505;
+}
+
+.hidden {
+  display: none;
 }
 
 .reviews__wrapper {
@@ -620,6 +705,65 @@ h5 {
 .transition-left {
   animation-name: move-left;
   animation-duration: 1.5s;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(80, 80, 80, 0.4);
+}
+
+.modal {
+  position: relative;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal__close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #c70101;
+  background-color: #fff;
+  border-radius: 50%;
+  user-select: none;
+  cursor: pointer;
+}
+
+.modal__close:before,
+.modal__close:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #c70101;
+}
+
+div:before {
+  transform: rotate(45deg);
+}
+
+div:after {
+  transform: rotate(-45deg);
+}
+
+.form__wrapper--modal {
+  padding-top: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

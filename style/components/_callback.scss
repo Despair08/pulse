@@ -22,11 +22,14 @@
   color: $text-color--light;
 }
 
-.callback__form {
+.form {
   display: flex;
   flex-direction: column;
   width: 303px;
   gap: 11px;
+}
+
+.callback__form {
   padding-bottom: 109px;
 }
 
@@ -37,6 +40,12 @@
 
   @extend %font;
   @include font(14px, 400, 14px, left);
+
+  outline: none;
+  &:focus-visible {
+    border-color: $accent-color;
+    box-shadow: none;
+  }
 }
 
 .form__button {
