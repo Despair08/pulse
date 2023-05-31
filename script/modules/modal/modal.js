@@ -55,8 +55,8 @@ export class Modal{
   }
 
   bindEvents(){
-    this.modalCloseBtn.addEventListener('click', this.closeModal);
     this.overlay.addEventListener('click', this.closeModal);
+    this.modalCloseBtn.addEventListener('click', this.closeModal);
   }
 
   openModal(){
@@ -66,7 +66,6 @@ export class Modal{
   closeModal(e){
     let classes = e.target.classList;
     if(classes.contains('overlay') || classes.contains('modal__close')){
-      console.log(e.target)
       document.querySelector('.overlay').remove();
     }
   }
