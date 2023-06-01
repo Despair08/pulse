@@ -8,20 +8,14 @@ export class Modal{
   }
 
   buildModal(content){
-    // Overlay
+
     this.overlay = this.createDomNode(this.overlay, 'div', 'overlay', this.classes);
 
-    // modal
     this.modal = this.createDomNode(this.modal, 'div', 'modal', this.classes);
 
-    // modalContent
     this.modalContent = this.createDomNode(this.modalContent, 'div', 'modal__content', this.classes);
 
-    // closeBtn
     this.modalCloseBtn = this.createDomNode(this.modalCloseBtn, 'div', 'modal__close', this.classes);
-
-    // this.modalCloseCross = this.createDomNode(this.modalCloseCross, 'span', 'modal__cross', this.classes);
-
 
     this.setContent(content);
 
@@ -55,8 +49,8 @@ export class Modal{
   }
 
   bindEvents(){
-    this.overlay.addEventListener('click', this.closeModal);
     this.modalCloseBtn.addEventListener('click', this.closeModal);
+    this.overlay.addEventListener('click', this.closeModal);
   }
 
   openModal(){
@@ -66,7 +60,8 @@ export class Modal{
   closeModal(e){
     let classes = e.target.classList;
     if(classes.contains('overlay') || classes.contains('modal__close')){
-      document.querySelector('.overlay').remove();
+      document.querySelector('.tools-modal').remove();
+      e.stopPropagation()
     }
   }
 }
