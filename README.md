@@ -1,3 +1,5 @@
 # Pulse
 ---
-![Иллюстрация к проекту](src:'./assets/preview.png')
+<div>
+  <img src="https://github.com/Despair08/pulse/blob/main/assets/preview.png" title="screen" alt="screen" />&nbsp;
+</div>
